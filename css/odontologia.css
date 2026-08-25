@@ -1,5 +1,5 @@
 /* 
-   ESTILOS EXCLUSIVOS: ODONTOLOGÍA SIONAMED
+   ESTILOS : ODONTOLOGÍA SIONAMED
  */
 
 /* Tipografía elegante para títulos de especialidad */
@@ -531,9 +531,9 @@
     transform: translateY(-2px);
 }
 
-/* ==========================================================================
+/* 
    7. CONTACTO & MAPA
-   ========================================================================== */
+    */
 .dental-contact-section {
     padding: clamp(3rem, 5vw, 5rem) 0;
     background-color: var(--light);

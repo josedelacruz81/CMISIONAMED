@@ -4,9 +4,9 @@
  */
 
 document.addEventListener('DOMContentLoaded', () => {
-    // ==========================================
+   
     // 1. CONFIGURACIÓN CENTRALIZADA DE CONTACTO
-    // ==========================================
+ 
     const DENTAL_CONFIG = {
         whatsappNumber: '593981186072', // Número oficial verificado para Odontología
         doctorName: 'Od. Leonela Zambrano',
