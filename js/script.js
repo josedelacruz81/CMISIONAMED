@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', () => {
         defaultMessage: 'Hola SIONAMED, deseo consultar sobre sus servicios médicos.',
         servicesData: {
             'Medicina General': 'Ofrecemos evaluación integral para niños, adultos y adultos mayores. Control preventivo anual, tratamiento de patologías comunes y manejo de hipertensión, diabetes y chequeos de rutina.',
-            'Obstetricia': 'Acompañamiento especializado en el embarazo: controles prenatales, ecografías obstétricas de alta resolución, chequeo ginecológico y asesoría en lactancia materna y planificación familiar.',
+            'Obstetricia': 'Acompañamiento especializado en el embarazo: controles prenatales, chequeo ginecológico y asesoría en lactancia materna y planificación familiar.',
             'Odontología': 'Cuidado bucal integral: profilaxis (limpieza profunda con ultrasonido), resinas y calzas estéticas, extracciones, blanqueamiento y atención odontopediátrica para toda la familia.',
             'Laboratorio Clínico': 'Exámenes de sangre, orina, coprológicos, perfiles lipídicos, tiroideos y pruebas de embarazo. Resultados rápidos, confiables y con estricto control de calidad.'
         }
