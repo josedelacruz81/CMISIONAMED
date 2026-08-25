@@ -1,0 +1,1049 @@
+/* 
+   PALETA DE COLORES OFICIAL SIONAMED
+    */
+:root {
+    /* Colores Principales de Marca */
+    --color-navy: #2F4156;       /* Navy: Encabezados, botones principales, footer y navbar */
+    --color-sky-blue: #C8D9E6;   /* Sky Blue: Acentos secundarios, detalles y fondos suaves */
+    --color-pale-pink: #FFE1E6;  /* Pale Pink: Fondo de la sección de llamado a la acción (CTA) */
+    --color-azalea: #F7C9D4;     /* Azalea: Acentos de maternidad/obstetricia e iconos destacados */
+    --color-beige: #F5EFEB;      /* Beige: Fondo general de la página */
+
+    /* Asignación a Variables de Uso */
+    --primary: var(--color-navy);
+    --primary-light: #3d536d;    /* Tono hover interactivo */
+    --secondary: var(--color-sky-blue);
+    --accent: var(--color-azalea);
+    --accent-bg: var(--color-pale-pink);
+    --light: var(--color-beige);
+    --white: #ffffff;
+    --text: #1a2530;             /* Texto legible de alto contraste */
+    --text-muted: #546575;       /* Subtítulos y descripciones */
+    --border-color: #dce4ec;
+    
+    /* Tipografía */
+    --font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    
+    /* Sombras y Bordes */
+    --radius-sm: 8px;
+    --radius-md: 16px;
+    --radius-lg: 24px;
+    --radius-pill: 50px;
+    --shadow-soft: 0 4px 20px rgba(47, 65, 86, 0.07);
+    --shadow-hover: 0 12px 30px rgba(47, 65, 86, 0.14);
+    --transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    font-size: 16px;
+}
+
+body {
+    font-family: var(--font-family);
+    color: var(--text);
+    background-color: var(--light);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: var(--transition);
+}
+
+ul {
+    list-style: none;
+}
+
+/* 
+   UTILIDADES & COMPONENTES BASE
+    */
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: clamp(1rem, 4vw, 2rem);
+    padding-right: clamp(1rem, 4vw, 2rem);
+}
+
+.text-center {
+    text-align: center;
+}
+
+/* Botones */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.95rem;
+    font-weight: 600;
+    padding: 0.8rem 1.8rem;
+    border-radius: var(--radius-pill);
+    cursor: pointer;
+    border: 2px solid transparent;
+    transition: var(--transition);
+    text-align: center;
+    white-space: nowrap;
+}
+
+.btn-primary {
+    background-color: var(--primary);
+    color: var(--white);
+}
+
+.btn-primary:hover {
+    background-color: var(--primary-light);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px #233b5340;
+}
+
+.btn-outline {
+    background-color: transparent;
+    color: var(--primary);
+    border-color: var(--color-azalea);
+}
+
+.btn-outline:hover {
+    background-color: var(--color-azalea);
+    color: var(--white);
+    transform: translateY(-2px);
+}
+
+.btn-cta {
+    background-color: var(--primary);
+    color: var(--white);
+    letter-spacing: 0.5px;
+    font-weight: 700;
+    padding: 1rem 2rem;
+}
+
+.btn-cta:hover {
+    background-color: #172635;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(35, 59, 83, 0.3);
+}
+
+.btn-link {
+    display: inline-block;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--text-muted);
+    text-decoration: underline;
+    margin-top: 0.5rem;
+}
+
+.btn-link:hover {
+    color: var(--primary);
+}
+
+/* 
+   1. BARRA SUPERIOR
+    */
+.topbar {
+    background-color: var(--primary);
+    color: #fdfcfc;
+    font-size: 0.85rem;
+    padding: 0.5rem 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.topbar-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+}
+
+.topbar-info {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.topbar-item {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    color: #F7C9D4;
+}
+
+.topbar-item:hover {
+    color: var(--secondary);
+}
+
+.topbar-location {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+}
+
+/* 
+   2. HEADER & NAVBAR
+    */
+.header {
+    background-color: var(--white);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.04);
+    transition: var(--transition);
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 0.85rem;
+    padding-bottom: 0.85rem;
+    gap: 1.5rem;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-right: clamp(1.5rem, 3vw, 3.5rem); 
+    flex-shrink: 0;                            
+}
+
+.logo-svg-wrap {
+    width: 44px;
+    height: 44px;
+}
+
+.logo-icon {
+    width: 100%;
+    height: 100%;
+}
+
+.logo-text {
+    display: flex;
+    flex-direction: column;
+    white-space: nowrap;
+}
+
+
+.logo-siona {
+    color: var(--color-navy);
+}
+
+.logo-med {
+    color: var(--color-sky-blue); 
+}
+
+.brand-title {
+    font-size: 30px;
+    font-weight: 800;
+    letter-spacing: 0.5px;
+    line-height: 1.1;
+    text-transform: uppercase;
+    font-family: 'Cinzel', serif;
+}
+
+.brand-subtitle {
+    font-size: 0.60rem;         
+    font-weight: 500;
+    letter-spacing: 2px;        
+    color: var(--text-muted);
+    white-space: nowrap;         
+    display: block;
+    color: gray;
+    
+}
+
+.nav-menu {
+    display: flex;
+    align-items: center;
+}
+
+.nav-list {
+    display: flex;
+    align-items: center;
+    gap: clamp(1rem, 2vw, 2rem);
+}
+
+.nav-link {
+    font-size: 0.95rem;
+    font-weight: 500;
+    color: var(--text);
+    position: relative;
+    padding: 0.3rem 0;
+    gap: 0.35rem;         
+    white-space: nowrap;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: var(--primary);
+    transition: var(--transition);
+}
+
+.nav-link:hover::after,
+.nav-link.active::after {
+    width: 100%;
+}
+
+.btn-nav {
+    padding: 0.6rem 1.4rem;
+    font-size: 0.9rem;
+}
+
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    color: var(--primary);
+    cursor: pointer;
+}
+
+/* Dropdown Navbar */
+.nav-item-dropdown {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+}
+
+.nav-arrow {
+    font-size: 0.65rem;
+    line-height: 1;
+    display: inline-block;
+    transition: transform 0.25s ease;
+}
+
+.nav-item-dropdown:hover .nav-arrow {
+    transform: rotate(180deg);
+}
+
+.dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: var(--white);
+    box-shadow: 0 10px 25px rgba(35, 59, 83, 0.12);
+    border-radius: var(--radius-sm);
+    padding: 0.5rem 0;
+    min-width: 200px;
+    display: none;
+    z-index: 1050;
+}
+
+.dropdown-menu::before {
+    content: '';
+    position: absolute;
+    top: -15px;
+    left: 0;
+    width: 100%;
+    height: 15px;
+    background-color: transparent;
+}
+
+.dropdown-menu li a {
+    display: block;
+    padding: 0.5rem 1.2rem;
+    font-size: 0.88rem;
+    color: var(--text);
+    transition: var(--transition);
+}
+
+.dropdown-menu li a:hover,
+.dropdown-menu li a.active {
+    background-color: #f0f6fb;
+    color: var(--color-navy);
+    font-weight: 600;
+}
+
+.nav-item-dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+/* 
+   3. HERO PRINCIPAL
+    */
+.hero-section {
+    position: relative;
+    padding-top: clamp(2rem, 5vw, 4.5rem);
+    padding-bottom: clamp(2rem, 5vw, 4.5rem);
+    background: linear-gradient(135deg, #e4edf5 0%, var(--color-beige) 65%);
+    overflow: hidden;
+}
+
+.hero-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: clamp(2rem, 4vw, 4rem);
+}
+
+.hero-title {
+    font-size: clamp(2rem, 3.5vw, 3.2rem);
+    font-weight: 800;
+    line-height: 1.15;
+    color: var(--primary);
+    margin-bottom: 1.25rem;
+}
+
+.hero-subtitle {
+    font-size: clamp(1rem, 1.3vw, 1.2rem);
+    color: var(--text-muted);
+    margin-bottom: 2rem;
+    font-weight: 400;
+}
+
+.hero-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.hero-image-wrapper {
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+.hero-img {
+    width: 100%;
+    border-radius: var(--radius-lg);
+    object-fit: cover;
+    aspect-ratio: 4 / 3;
+}
+
+/* 
+   4. SECCIÓN DE ESPECIALIDADES
+    */
+.services-section {
+    padding-top: clamp(3rem, 6vw, 5.5rem);
+    padding-bottom: clamp(3rem, 6vw, 5.5rem);
+    background-color: var(--light);
+}
+
+.section-heading {
+    margin-bottom: clamp(2rem, 4vw, 3.5rem);
+}
+
+.section-title {
+    font-size: clamp(1.8rem, 2.5vw, 2.4rem);
+    color: var(--primary);
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+
+.section-description {
+    color: var(--text-muted);
+    font-size: 1.05rem;
+    max-width: 650px;
+    margin: 0 auto;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
+}
+
+.service-card {
+    background-color: var(--white);
+    border-radius: var(--radius-md);
+    padding: 2.2rem 1.5rem 1.8rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    box-shadow: var(--shadow-soft);
+    position: relative;
+    overflow: hidden;
+    transition: var(--transition);
+}
+
+.service-card:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-hover);
+}
+
+.card-header-accent {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 6px;
+}
+
+.card-general .card-header-accent { 
+    background-color: var(--secondary); 
+}
+.card-obstetricia .card-header-accent {
+    background-color: var(--color-azalea);
+}
+.card-general .card-header-accent,
+.card-odontologia .card-header-accent {
+    background-color: var(--color-sky-blue);
+}
+.card-laboratorio .card-header-accent {
+    background-color: var(--color-navy);
+}
+
+.card-icon-wrap {
+    width: 75px;
+    height: 75px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+}
+
+.card-general .card-icon-wrap { background-color: #e5f3f9; color: var(--primary); }
+.card-obstetricia .card-icon-wrap {
+    background-color: var(--color-pale-pink);
+    color: #c95272;
+}
+.card-general .card-icon-wrap,
+.card-odontologia .card-icon-wrap {
+    background-color: #e5edf4;
+    color: var(--color-navy);
+}
+.card-laboratorio .card-icon-wrap {
+    background-color: #dbe4ec;
+    color: var(--color-navy);
+}
+
+.card-title {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: var(--primary);
+    margin-bottom: 0.75rem;
+}
+
+.card-text {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    line-height: 1.5;
+    margin-bottom: 1.5rem;
+    flex-grow: 1;
+}
+
+.card-actions {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.35rem;
+    width: 100%;
+}
+
+.btn-card-primary {
+    width: 100%;
+    background-color: var(--primary);
+    color: var(--white);
+    padding: 0.65rem 1rem;
+    font-size: 0.9rem;
+}
+
+.btn-card-primary:hover {
+    background-color: var(--primary-light);
+}
+
+.btn-card-outline {
+    width: 100%;
+    background-color: transparent;
+    border-color: var(--accent);
+    color: #b8496c;
+    padding: 0.65rem 1rem;
+    font-size: 0.9rem;
+}
+
+.btn-card-outline:hover {
+    background-color: var(--accent);
+    color: var(--white);
+}
+
+.btn-card-secondary {
+    width: 100%;
+    background-color: var(--secondary);
+    color: var(--primary);
+    padding: 0.65rem 1rem;
+    font-size: 0.9rem;
+}
+
+.btn-card-secondary:hover {
+    background-color: #92cadf;
+}
+
+/* 
+   5. SECCIÓN NOSOTROS */
+.about-section {
+    padding-top: clamp(3rem, 6vw, 5.5rem);
+    padding-bottom: clamp(3rem, 6vw, 5.5rem);
+    background-color: var(--white);
+}
+
+.about-grid {
+    display: grid;
+    grid-template-columns: 0.9fr 1.1fr;
+    align-items: center;
+    gap: clamp(2rem, 5vw, 4rem);
+}
+
+.about-image-wrapper {
+    position: relative;
+}
+
+.about-img {
+    width: 100%;
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-soft);
+    object-fit: cover;
+}
+
+.about-title {
+    font-size: clamp(1.4rem, 2.2vw, 1.9rem);
+    line-height: 1.35;
+    color: var(--primary);
+    margin-bottom: 2rem;
+    font-weight: 700;
+}
+
+.about-features {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.feature-item {
+    flex: 1;
+    min-width: 150px;
+    background-color: var(--light);
+    padding: 1.25rem 1rem;
+    border-radius: var(--radius-sm);
+    border-left: 4px solid var(--secondary);
+}
+
+.feature-header {
+    display: flex;
+    align-items: baseline;
+    gap: 0.5rem;
+    margin-bottom: 0.35rem;
+}
+
+.feature-number {
+    font-size: 2.2rem;
+    font-weight: 800;
+    line-height: 1;
+    color: var(--accent);
+}
+
+.feature-check {
+    color: #2e7d32;
+    font-size: 1.1rem;
+}
+
+.feature-name {
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: var(--primary);
+}
+
+.about-description {
+    color: var(--text-muted);
+    font-size: 1rem;
+    margin-bottom: 1rem;
+}
+
+.about-subtag {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--primary);
+    letter-spacing: 0.5px;
+}
+
+/* 
+   6. CTA + 7. UBICACIÓN */
+.cta-map-section {
+    padding-top: clamp(2rem, 4vw, 3.5rem);
+    padding-bottom: clamp(3rem, 5vw, 4.5rem);
+    background-color: var(--light);
+}
+
+.cta-map-grid {
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    background-color: var(--white);
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    box-shadow: var(--shadow-soft);
+}
+
+.cta-card {
+    background-color: var(--accent-bg);
+    padding: clamp(2rem, 4vw, 3.5rem);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.cta-title {
+    font-size: clamp(1.6rem, 2.3vw, 2.2rem);
+    font-weight: 800;
+    color: var(--primary);
+    margin-bottom: 0.75rem;
+}
+
+.cta-text {
+    font-size: 1.05rem;
+    color: var(--text);
+    margin-bottom: 2rem;
+}
+
+.cta-links {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 1.5rem;
+    font-size: 0.95rem;
+    font-weight: 600;
+}
+
+.cta-sublink {
+    color: var(--primary);
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+}
+
+.cta-sublink:hover {
+    text-decoration: underline;
+}
+
+.separator {
+    color: var(--text-muted);
+}
+
+.map-wrapper {
+    position: relative;
+    min-height: 380px;
+    width: 100%;
+    height: 100%;
+}
+
+.map-wrapper iframe {
+    width: 100%;
+    height: 100%;
+    min-height: 380px;
+}
+
+/* 
+   8. FOOTER */
+.footer {
+    background-color: var(--primary);
+    color: #d1d8e0;
+    padding-top: 2.2rem;
+    font-size: 0.85rem;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1fr 1.3fr;
+    gap: 1.5rem;
+    padding-bottom: 1.8rem;
+}
+
+.logo-footer .brand-title {
+    color: var(--white);
+}
+
+.logo-footer .brand-subtitle {
+    color: var(--color-beige);
+}
+
+.logo-footer .logo-siona {
+    color: var(--color-beige); 
+}
+
+.logo-footer .logo-med {
+    color: var(--color-sky-blue); 
+}
+
+.footer-about {
+    margin-top: 1rem;
+    line-height: 1.6;
+    color: var(--color-beige);
+}
+
+.footer-heading {
+    color: var(--white);
+    font-size: 0.95rem;
+    font-weight: 600;
+    margin-bottom: 0.6rem;
+    position: relative;
+}
+
+.footer-links li {
+    margin-bottom: 0.25rem;    
+    line-height: 1.3;   
+}
+
+.footer-links a {
+    display: inline-block;
+    padding: 0.1rem 0;        
+}
+
+.footer-contact li {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 0.35rem;   
+    line-height: 1.3;
+}
+
+.footer-about {
+    margin-top: 0.5rem;       
+    line-height: 1.4;
+    color: #9fb3c8;
+}
+
+.footer-bottom {
+    background-color: #1a2c3e;
+    padding: 0.75rem 0;        /* Reducido (antes 1.25rem) */
+    font-size: 0.75rem;
+}
+.bottom-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+/* 
+   9. BOTÓN FLOTANTE DE WHATSAPP
+    */
+.whatsapp-float {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    width: 60px;
+    height: 60px;
+    background-color: #25d366;
+    color: var(--white);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 32px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.25);
+    z-index: 999;
+    transition: var(--transition);
+    animation: pulse 2s infinite;
+}
+
+.whatsapp-float:hover {
+    transform: scale(1.1);
+    background-color: #20ba59;
+    color: var(--white);
+}
+
+@keyframes pulse {
+    0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.6); }
+    70% { box-shadow: 0 0 0 15px rgba(37, 211, 102, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
+}
+
+/* 
+   MODAL DE SERVICIOS
+    */
+.modal-overlay {
+    position: fixed;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2000;
+    opacity: 0;
+    visibility: hidden;
+    transition: var(--transition);
+    padding: 1rem;
+}
+
+.modal-overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.modal-container {
+    background-color: var(--white);
+    border-radius: var(--radius-md);
+    max-width: 500px;
+    width: 100%;
+    padding: 2rem;
+    position: relative;
+    transform: translateY(20px);
+    transition: var(--transition);
+}
+
+.modal-overlay.active .modal-container {
+    transform: translateY(0);
+}
+
+.modal-close {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: none;
+    border: none;
+    font-size: 1.8rem;
+    cursor: pointer;
+    color: var(--text-muted);
+}
+
+.modal-title {
+    color: var(--primary);
+    font-size: 1.4rem;
+    margin-bottom: 0.75rem;
+}
+
+.modal-text {
+    color: var(--text-muted);
+    margin-bottom: 1.5rem;
+}
+
+/* 
+   RESPONSIVE DESIGN
+    */
+
+/* Tablet: 768px a 1023px */
+@media (min-width: 768px) and (max-width: 1023px) {
+    .services-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .about-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .about-img {
+        max-height: 400px;
+        width: 100%;
+    }
+
+    .cta-map-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .footer-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+    }
+}
+
+/* Mobile: Menor a 768px */
+@media (max-width: 852px) {
+    .topbar-container {
+        justify-content: center;
+        text-align: center;
+    }
+
+    .topbar-info {
+        flex-direction: column;
+        gap: 0.25rem;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .nav-menu {
+        position: fixed;
+        top: 65px;
+        right: -100%;
+        width: 80%;
+        max-width: 320px;
+        height: calc(100vh - 65px);
+        background-color: var(--white);
+        box-shadow: -5px 0 20px rgba(0, 0, 0, 0.1);
+        flex-direction: column;
+        justify-content: flex-start;
+        padding: 2.5rem 1.5rem;
+        transition: right 0.3s ease-in-out;
+        z-index: 1001;
+    }
+
+    .nav-menu.active {
+        right: 0;
+    }
+
+    .nav-list {
+        flex-direction: column;
+        align-items: flex-start;
+        width: 100%;
+        gap: 1.5rem;
+    }
+
+    .btn-nav {
+        width: 100%;
+        text-align: center;
+    }
+
+    .hero-grid {
+        grid-template-columns: 1fr;
+        text-align: center;
+        gap: 2rem;
+    }
+
+    .hero-actions {
+        justify-content: center;
+    }
+
+    .services-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .about-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .about-features {
+        flex-direction: column;
+    }
+
+    .cta-map-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .map-wrapper {
+        min-height: 280px;
+    }
+
+    .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .bottom-container {
+        flex-direction: column;
+        text-align: center;
+    }
+}

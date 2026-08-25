@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO Local & Metadatos -->
+    <title>Odontología en Shushufindi | SIONAMED Centro Médico Integral</title>
+    <meta name="description" content="Servicio de Odontología especializada en SIONAMED Shushufindi con la Od. Leonela Zambrano. Limpiezas, ortodoncia, extracciones, implantes y estética dental. Agenda tu cita.">
+    <meta name="keywords" content="Odontología en Shushufindi, Dentista en Shushufindi, Odontología SIONAMED, Servicios odontológicos Shushufindi, Limpieza dental Shushufindi, Ortodoncia Shushufindi, Od. Leonela Zambrano">
+    <meta name="author" content="SIONAMED">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="Odontología en Shushufindi | SIONAMED">
+    <meta property="og:description" content="Sonrisas sanas, pacientes felices. Tratamientos odontológicos integrales en Shushufindi con la Od. Leonela Zambrano.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="media/odontologa.jpeg">
+    
+    <!-- Google Fonts & Font Awesome Icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,600&family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <!-- Hojas de Estilos -->
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/odontologia.css">
+</head>
+<body class="dental-page">
+
+    <!-- 1. BARRA SUPERIOR -->
+    <div class="topbar">
+        <div class="container topbar-container">
+            <div class="topbar-info">
+                <a href="https://wa.me/593981186072" target="_blank" rel="noopener noreferrer" class="topbar-item" aria-label="Escribir al WhatsApp de Odontología">
+                    <i class="fa-brands fa-whatsapp"></i>
+                    <span>WhatsApp Odontología</span>
+                </a>
+            </div>
+            <div class="topbar-location">
+                <i class="fa-solid fa-location-dot"></i>
+                <span>Calle Orellana (Frente a Cevichería Delicias del Mar), Shushufindi</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- 2. HEADER & NAVBAR -->
+    <header class="header" id="header">
+        <div class="container header-container">
+            <a href="index.html" class="logo" aria-label="Página principal de SIONAMED">
+                <img src="media/logo.png" alt="SIONAMED Logo" class="logo-img">
+                <div class="logo-text">
+                    <span class="brand-title"><span class="logo-siona">SIONA</span><span class="logo-med">MED</span></span>
+                    <span class="brand-subtitle">CENTRO MÉDICO INTEGRAL</span>
+                </div>
+            </a>
+
+            <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú de navegación" aria-expanded="false" aria-controls="navMenu">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+
+            <nav class="nav-menu" id="navMenu">
+                <ul class="nav-list">
+                    <li><a href="index.html" class="nav-link">Inicio</a></li>
+                    <li class="nav-item-dropdown">
+                        <a href="index.html#especialidades" class="nav-link active">Especialidades <i class="fa-solid fa-chevron-down nav-arrow"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="index.html#especialidades">Medicina General</a></li>
+                            <li><a href="index.html#especialidades">Obstetricia</a></li>
+                            <li><a href="odontologia.html" class="active">Odontología</a></li>
+                            <li><a href="index.html#especialidades">Laboratorio Clínico</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="index.html#nosotros" class="nav-link">Nosotros</a></li>
+                    <li><a href="#ubicacion" class="nav-link">Ubicación</a></li>
+                    <li>
+                        <button type="button" class="btn btn-primary btn-nav js-whatsapp-btn" data-service="Cita Odontológica General">Agendar Cita</button>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- 1. HERO DE ODONTOLOGÍA -->
+        <section class="dental-hero" id="inicio">
+            <div class="container dental-hero-grid">
+                <div class="dental-hero-content">
+                    <div class="badge-dental">
+                        <i class="fa-solid fa-tooth"></i> Especialidad Odontológica
+                    </div>
+                    <h1 class="dental-hero-title">ODONTOLOGÍA</h1>
+                    <p class="dental-hero-tagline">“Sonrisas sanas, pacientes felices”</p>
+                    <p class="dental-hero-text">
+                        En <strong>SIONAMED Centro Médico Integral</strong> cuidamos tu salud bucal con atención profesional, cercana y personalizada en Shushufindi.
+                    </p>
+                    <div class="hero-actions">
+                        <button type="button" class="btn btn-primary js-whatsapp-btn" data-service="Consulta Odontológica General">
+                            <i class="fa-brands fa-whatsapp"></i> Agendar Cita
+                        </button>
+                        <a href="#servicios" class="btn btn-outline">
+                            Ver Servicios
+                        </a>
+                    </div>
+                </div>
+
+                <div class="dental-hero-image-wrapper">
+                    <div class="doctor-badge-floating">
+                        <div class="badge-icon"><i class="fa-solid fa-user-doctor"></i></div>
+                        <div class="badge-info">
+                            <span class="badge-name">Od. Leonela Zambrano</span>
+                            <span class="badge-spec">Odontóloga Especialista</span>
+                        </div>
+                    </div>
+                    <img src="media/odon.jpeg" width="800" height="1000" alt="Od. Leonela Zambrano en el consultorio odontológico de SIONAMED" class="dental-hero-img" fetchpriority="high">
+                </div>
+            </div>
+        </section>
+
+        <!-- 2. SECCIÓN DE SERVICIOS ODONTOLÓGICOS -->
+        <section class="dental-services-section" id="servicios">
+            <div class="container">
+                <div class="section-heading text-center">
+                    <h2 class="section-title title-serif">Servicios Odontológicos</h2>
+                    <p class="section-description">Contamos con diferentes tratamientos para cuidar, prevenir y mejorar la salud de tu sonrisa.</p>
+                </div>
+
+                <div class="dental-cards-grid">
+                    <!-- 1. Limpieza Dental -->
+                    <article class="treatment-card">
+                        <div class="treatment-icon-wrap">
+                            <img src="media/iconclean.svg" alt="" class="treatment-logo" aria-hidden="true">
+                        </div>
+                        <h3 class="treatment-title">Limpieza dental</h3>
+                        <p class="treatment-desc">Tratamiento orientado a mantener una correcta higiene y salud bucal mediante profilaxis y remoción de sarro.</p>
+                        <button type="button" class="btn btn-treatment-action js-whatsapp-btn" data-service="Limpieza Dental">
+                            Consultar <i class="fa-solid fa-arrow-right"></i>
+                        </button>
+                    </article>
+
+                    <!-- 2. Sellantes Dentales -->
+                    <article class="treatment-card">
+                        <div class="treatment-icon-wrap">
+                            <img src="media/toothshield.svg" alt="" class="treatment-logo" aria-hidden="true">
+                        </div>
+                        <h3 class="treatment-title">Sellantes dentales</h3>
+                        <p class="treatment-desc">Protección preventiva colocada en las fisuras de los dientes para ayudar a evitar la aparición de caries tempranas.</p>
+                        <button type="button" class="btn btn-treatment-action js-whatsapp-btn" data-service="Sellantes Dentales">
+                            Consultar <i class="fa-solid fa-arrow-right"></i>
+                        </button>
+                    </article>
+
+                    <!-- 3. Exodoncias / Extracciones -->
+                    <article class="treatment-card">
+                        <div class="treatment-icon-wrap">
+                            <img src="media/extraction.svg" alt="" class="treatment-logo" aria-hidden="true">
+                        </div>
+                        <h3 class="treatment-title">Exodoncias / Extracciones</h3>
+                        <p class="treatment-desc">Procedimientos de extracción dental seguros, indoloros y realizados con atención profesional y máxima asepsia.</p>
+                        <button type="button" class="btn btn-treatment-action js-whatsapp-btn" data-service="Exodoncias / Extracciones Dentales">
+                            Consultar <i class="fa-solid fa-arrow-right"></i>
+                        </button>
+                    </article>
+
+                    <!-- 4. Curaciones Dentales -->
+                    <article class="treatment-card">
+                        <div class="treatment-icon-wrap">
+                            <i class="fa-solid fa-kit-medical"></i>
+                        </div>
+                        <h3 class="treatment-title">Curaciones dentales</h3>
+                        <p class="treatment-desc">Tratamientos estéticos con resina de alta durabilidad para recuperar y proteger piezas dentales afectadas por caries.</p>
+                        <button type="button" class="btn btn-treatment-action js-whatsapp-btn" data-service="Curaciones Dentales">
+                            Consultar <i class="fa-solid fa-arrow-right"></i>
+                        </button>
+                    </article>
+
+                    <!-- 5. Blanqueamiento Dental -->
+                    <article class="treatment-card">
+                        <div class="treatment-icon-wrap">
+                            <img src="media/iconclean.svg" alt="" class="treatment-logo" aria-hidden="true">
+                        </div>
+                        <h3 class="treatment-title">Blanqueamiento dental</h3>
+                        <p class="treatment-desc">Procedimiento estético avanzado para aclarar tonalidades y devolver luminosidad y armonía a tu sonrisa.</p>
+                        <button type="button" class="btn btn-treatment-action js-whatsapp-btn" data-service="Blanqueamiento Dental">
+                            Consultar <i class="fa-solid fa-arrow-right"></i>
+                        </button>
+                    </article>
+
+                    <!-- 6. Implantes Dentales -->
+                    <article class="treatment-card">
+                        <div class="treatment-icon-wrap">
+                            <img src="media/toothimplant.svg" alt="" class="treatment-logo" aria-hidden="true">
+                        </div>
+                        <h3 class="treatment-title">Implantes dentales</h3>
+                        <p class="treatment-desc">Alternativa definitiva para recuperar piezas dentales perdidas mediante soluciones fijas y de apariencia natural.</p>
+                        <button type="button" class="btn btn-treatment-action js-whatsapp-btn" data-service="Implantes Dentales">
+                            Consultar <i class="fa-solid fa-arrow-right"></i>
+                        </button>
+                    </article>
+
+                    <!-- 7. Cirugía de Terceros Molares -->
+                    <article class="treatment-card">
+                        <div class="treatment-icon-wrap">
+                            <i class="fa-solid fa-hospital-user"></i>
+                        </div>
+                        <h3 class="treatment-title">Cirugía terceros molares</h3>
+                        <p class="treatment-desc">Extracción especializada de muelas del juicio impactadas o en mala posición con recuperación controlada.</p>
+                        <button type="button" class="btn btn-treatment-action js-whatsapp-btn" data-service="Cirugía de Terceros Molares">
+                            Consultar <i class="fa-solid fa-arrow-right"></i>
+                        </button>
+                    </article>
+
+                    <!-- 8. Ortodoncia / Brackets -->
+                    <article class="treatment-card">
+                        <div class="treatment-icon-wrap">
+                            <i class="fa-solid fa-teeth-open"></i>
+                        </div>
+                        <h3 class="treatment-title">Ortodoncia / Brackets</h3>
+                        <p class="treatment-desc">Tratamientos correctivos orientados a mejorar la alineación dental, la funcionalidad masticatoria y la mordida.</p>
+                        <button type="button" class="btn btn-treatment-action js-whatsapp-btn" data-service="Ortodoncia / Brackets">
+                            Consultar <i class="fa-solid fa-arrow-right"></i>
+                        </button>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. SECCIÓN "CONOCE A NUESTRA ODONTÓLOGA" -->
+        <section class="doctor-profile-section" id="profesional">
+            <div class="container doctor-profile-grid">
+                <div class="doctor-photo-container">
+                    <div class="photo-frame">
+                        <img src="media/prof.png" width="800" height="1067" alt="Dra. Odontóloga Leonela Zambrano" class="doctor-profile-img" loading="lazy">
+                    </div>
+                </div>
+
+                <div class="doctor-info-container">
+                    <span class="subheading-pill">Equipo de Profesionales</span>
+                    <h2 class="doctor-name title-serif">Od. Leonela Zambrano</h2>
+                    <p class="doctor-role">Odontóloga General & Estética Dental</p>
+                    
+                    <p class="doctor-bio">
+                        Profesional comprometida con brindar atención odontológica personalizada, buscando que cada paciente se sienta seguro, escuchado y acompañado durante todo su proceso de recuperación y salud oral.
+                    </p>
+
+                    <ul class="doctor-checklist">
+                        <li><i class="fa-solid fa-circle-check"></i> Atención personalizada y diagnóstico claro</li>
+                        <li><i class="fa-solid fa-circle-check"></i> Trato humano, empático y sin dolor</li>
+                        <li><i class="fa-solid fa-circle-check"></i> Prevención y cuidado dental para toda la familia</li>
+                        <li><i class="fa-solid fa-circle-check"></i> Seguimiento post-tratamiento continuo</li>
+                    </ul>
+
+                    <div class="doctor-cta-wrap">
+                        <button type="button" class="btn btn-primary js-whatsapp-btn" data-service="Cita con la Od. Leonela Zambrano">
+                            <i class="fa-brands fa-whatsapp"></i> Agendar Cita con Odontología
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. SECCIÓN "¿POR QUÉ ELEGIR ODONTOLOGÍA EN SIONAMED?" -->
+        <section class="benefits-section">
+            <div class="container">
+                <div class="section-heading text-center">
+                    <h2 class="section-title title-serif">¿Por qué elegir Odontología en SIONAMED?</h2>
+                    <p class="section-description">Nos enfocamos en brindarte una experiencia médica basada en la seguridad y el confort.</p>
+                </div>
+
+                <div class="benefits-grid">
+                    <div class="benefit-card">
+                        <div class="benefit-icon"><i class="fa-solid fa-heart-pulse"></i></div>
+                        <h3 class="benefit-title">Atención personalizada</h3>
+                        <p class="benefit-text">Nos enfocamos en comprender a detalle las necesidades y expectativas de cada paciente.</p>
+                    </div>
+
+                    <div class="benefit-card">
+                        <div class="benefit-icon"><i class="fa-solid fa-user-tie"></i></div>
+                        <h3 class="benefit-title">Profesionales comprometidos</h3>
+                        <p class="benefit-text">Contamos con vocación y experiencia médica orientadas estrictamente al bienestar del paciente.</p>
+                    </div>
+
+                    <div class="benefit-card">
+                        <div class="benefit-icon"><i class="fa-solid fa-teeth"></i></div>
+                        <h3 class="benefit-title">Tratamientos integrales</h3>
+                        <p class="benefit-text">Disponemos de diferentes alternativas para resolver desde limpiezas hasta cirugías e implantes.</p>
+                    </div>
+
+                    <div class="benefit-card">
+                        <div class="benefit-icon"><i class="fa-solid fa-couch"></i></div>
+                        <h3 class="benefit-title">Ambiente confortable</h3>
+                        <p class="benefit-text">Un consultorio equipado para brindar tranquilidad, confianza y relajación en cada visita.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 5. SECCIÓN VISUAL DEL CONSULTORIO -->
+        <section class="clinic-showcase-section">
+            <div class="container showcase-grid">
+                <div class="showcase-content">
+                    <span class="subheading-pill">Experiencia y Calidad</span>
+                    <h2 class="showcase-title title-serif">Tu sonrisa merece atención profesional</h2>
+                    <p class="showcase-text">
+                        En SIONAMED trabajamos para ofrecerte una experiencia odontológica basada en confianza, instrumental esterilizado de última generación y acompañamiento clínico personalizado en el corazón de Shushufindi.
+                    </p>
+                    <a href="index.html#nosotros" class="btn btn-outline">
+                        Conocer Más de SIONAMED
+                    </a>
+                </div>
+                <div class="showcase-image-wrap">
+                    <img src="media/odonto.jpeg" width="800" height="1000" alt="Consultorio Odontológico SIONAMED" class="showcase-img" loading="lazy">
+                </div>
+            </div>
+        </section>
+
+        <!-- 6. LLAMADA A LA ACCIÓN (CTA) -->
+        <section class="dental-cta-section">
+            <div class="container text-center">
+                <h2 class="dental-cta-title title-serif">¿Listo para cuidar tu sonrisa?</h2>
+                <p class="dental-cta-text">Agenda tu cita odontológica y recibe atención profesional en SIONAMED Centro Médico Integral.</p>
+                <div class="cta-btn-group">
+                    <button type="button" class="btn btn-cta-primary js-whatsapp-btn" data-service="Solicitud de Turno Odontológico">
+                        <i class="fa-brands fa-whatsapp"></i> AGENDAR CITA POR WHATSAPP
+                    </button>
+                    <a href="#ubicacion" class="btn btn-cta-secondary">
+                        <i class="fa-solid fa-location-arrow"></i> VER UBICACIÓN
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- 7. CONTACTO, HORARIOS & 8. MAPA -->
+        <section class="dental-contact-section" id="ubicacion">
+            <div class="container dental-contact-grid">
+                <!-- Información y Horarios -->
+                <div class="contact-card-info">
+                    <span class="subheading-pill">Contacto Directo</span>
+                    <h2 class="contact-card-title title-serif">Atención Odontológica</h2>
+                    <p class="contact-lead">SIONAMED Centro Médico Integral</p>
+
+                    <div class="contact-details-list">
+                        <div class="contact-item">
+                            <i class="fa-solid fa-location-dot"></i>
+                            <div>
+                                <strong>Ubicación:</strong>
+                                <p>Calle Orellana a una cuadra del parque Siona, frente a la Cevichería Delicias del Mar. Shushufindi, Sucumbíos, Ecuador.</p>
+                            </div>
+                        </div>
+
+                        <div class="contact-item">
+                            <i class="fa-brands fa-whatsapp"></i>
+                            <div>
+                                <strong>Números de Atención / Citas:</strong>
+                                <p>+593 98 118 6072</p>
+                            </div>
+                        </div>
+
+                        <div class="contact-item">
+                            <i class="fa-regular fa-clock"></i>
+                            <div>
+                                <strong>Horarios de Consulta:</strong>
+                                <p class="schedule-line"><span>Lunes a Viernes:</span> 08:00 - 19:00</p>
+                                <p class="schedule-line"><span>Sábados:</span> 08:00 - 13:00</p>
+                                <p class="schedule-line"><span>Domingos:</span> Previa cita de urgencia</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <button type="button" class="btn btn-primary btn-full js-whatsapp-btn" data-service="Horarios y Turnos Odontología">
+                        <i class="fa-brands fa-whatsapp"></i> Enviar Mensaje a Recepción
+                    </button>
+                </div>
+
+                <!-- Mapa Responsive -->
+                <div class="map-container-dental">
+                    <iframe 
+                        title="Ubicación exacta de SIONAMED en Shushufindi"
+                        src="https://maps.google.com/maps?q=-0.187427,-76.644533(SIONAMED%20Centro%20M%C3%A9dico)&hl=es&z=17&output=embed" 
+                        width="100%" 
+                        height="100%" 
+                        style="border:0;" 
+                        allowfullscreen="" 
+                        loading="lazy" 
+                        referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER GLOBAL -->
+    <footer class="footer">
+        <div class="container footer-grid">
+            <div class="footer-col brand-col">
+                <div class="logo logo-footer">
+                    <span class="brand-title"><span class="logo-siona">SIONA</span><span class="logo-med">MED</span></span>
+                    <span class="brand-subtitle">CENTRO MÉDICO INTEGRAL</span>
+                </div>
+                <p class="footer-about">
+                    Comprometidos con la salud integral de Shushufindi. Atención con excelencia, ética y cercanía en cada especialidad.
+                </p>
+            </div>
+
+            <div class="footer-col">
+                <h4 class="footer-heading">Especialidades</h4>
+                <ul class="footer-links">
+                    <li><a href="index.html#especialidades">Medicina General</a></li>
+                    <li><a href="index.html#especialidades">Obstetricia</a></li>
+                    <li><a href="odontologia.html">Odontología Integral</a></li>
+                    <li><a href="index.html#especialidades">Laboratorio Clínico</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4 class="footer-heading">Navegación</h4>
+                <ul class="footer-links">
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="index.html#nosotros">Nosotros</a></li>
+                    <li><a href="#servicios">Tratamientos Odontológicos</a></li>
+                    <li><a href="#ubicacion">Ubicación y Horarios</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4 class="footer-heading">Contacto Shushufindi</h4>
+                <ul class="footer-contact">
+                    <li>
+                        <i class="fa-brands fa-whatsapp"></i>
+                        <a href="https://wa.me/593981186072" target="_blank" rel="noopener noreferrer">+593 98 118 6072</a>
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-envelope"></i>
+                        <a href="mailto:cmisionamed@gmail.com">cmisionamed@gmail.com</a>
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-location-dot"></i>
+                        <a href="https://www.google.com/maps/place/SIONAMED/@-0.1874217,-76.6449586,19z/data=!4m6!3m5!1s0x91d7ef170eee374d:0x9be69a8bc2b48124!8m2!3d-0.187427!4d-76.644533!16s%2Fg%2F11z8tmyr0_?hl=es&entry=ttu&g_ep=EgoyMDI2MDgxOS4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener noreferrer">Calle Orellana frente a Cevichería Delicias del Mar</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <div class="container bottom-container">
+                <p>&copy; 2026 SIONAMED Centro Médico Integral. Todos los derechos reservados.</p>
+                <p>Odontología • Od. Leonela Zambrano</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- 9. BOTÓN FLOTANTE DE WHATSAPP -->
+    <a href="#" class="whatsapp-float js-whatsapp-btn" id="whatsappFloat" data-service="Consulta General de Odontología" aria-label="Contactar a Odontología por WhatsApp">
+        <i class="fa-brands fa-whatsapp"></i>
+    </a>
+
+    <!-- Scripts -->
+    <script src="js/odontologia.js"></script>
+</body>
+</html>

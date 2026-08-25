@@ -1,0 +1,722 @@
+/* 
+   ESTILOS EXCLUSIVOS: ODONTOLOGÍA SIONAMED
+ */
+
+/* Tipografía elegante para títulos de especialidad */
+.title-serif {
+    font-family: 'Playfair Display', Georgia, serif;
+    letter-spacing: -0.5px;
+}
+
+/* Badge de subencabezados */
+.subheading-pill {
+    display: inline-block;
+    background-color: var(--color-sky-blue);
+    color: var(--color-navy);
+    font-size: 0.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: 0.35rem 1rem;
+    border-radius: var(--radius-pill);
+    margin-bottom: 0.8rem;
+}
+
+/* Dropdown Navbar */
+.nav-item-dropdown {
+    position: relative;
+}
+
+.nav-arrow {
+    font-size: 0.7rem;
+    margin-left: 0.2rem;
+    transition: var(--transition);
+}
+
+.dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: var(--white);
+    box-shadow: 0 10px 25px rgba(35, 59, 83, 0.12);
+    border-radius: var(--radius-sm);
+    padding: 0.5rem 0;
+    min-width: 200px;
+    display: none;
+    z-index: 1050;
+}
+
+.dropdown-menu::before {
+    content: '';
+    position: absolute;
+    top: -15px;
+    left: 0;
+    width: 100%;
+    height: 15px;
+    background-color: transparent;
+}
+
+.dropdown-menu li a:hover,
+.dropdown-menu li a.active {
+    background-color: #f0f6fb;
+    color: var(--color-navy);
+    font-weight: 600;
+}
+
+.nav-item-dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+.nav-item-dropdown:focus-within .dropdown-menu {
+    display: block;
+}
+
+:is(a, button):focus-visible {
+    outline: 3px solid var(--color-azalea);
+    outline-offset: 3px;
+}
+
+/* 
+   1. HERO ODONTOLOGÍA
+    */
+.dental-hero {
+    padding: clamp(2.5rem, 5vw, 4.5rem) 0;
+    background: linear-gradient(145deg, #e4edf5 0%, #f9f7f4 70%);
+    position: relative;
+    overflow: hidden;
+}
+
+.dental-hero-grid {
+    display: grid;
+    grid-template-columns: 1.15fr 0.85fr;
+    align-items: center;
+    gap: clamp(2rem, 4vw, 3.5rem);
+}
+
+.badge-dental {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background-color: var(--white);
+    color: var(--color-navy);
+    font-size: 0.85rem;
+    font-weight: 700;
+    padding: 0.4rem 1rem;
+    border-radius: var(--radius-pill);
+    box-shadow: 0 2px 10px rgba(47, 65, 86, 0.08);
+    margin-bottom: 1rem;
+}
+
+.dental-hero-title {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: clamp(2.5rem, 5vw, 4.2rem);
+    font-weight: 800;
+    color: var(--color-navy);
+    line-height: 1.08;
+    margin-bottom: 0.5rem;
+}
+
+.dental-hero-tagline {
+    font-size: clamp(1.2rem, 2vw, 1.6rem);
+    font-weight: 600;
+    color: #4a6785;
+    margin-bottom: 1.25rem;
+    font-style: italic;
+}
+
+.dental-hero-text {
+    font-size: 1.05rem;
+    color: var(--text-muted);
+    max-width: 540px;
+    margin-bottom: 2rem;
+    line-height: 1.6;
+}
+
+.dental-hero-image-wrapper {
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+.dental-hero-img {
+    width: 100%;
+    height: auto;
+    max-height: 600px;
+    aspect-ratio: 4 / 5;
+    object-fit: cover;
+    object-position: top center;
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-hover);
+    border: 4px solid var(--white);
+}
+
+.doctor-badge-floating {
+    position: absolute;
+    bottom: 20px;
+    left: -20px;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(8px);
+    padding: 0.75rem 1.25rem;
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-hover);
+    display: flex;
+    align-items: center;
+    gap: 0.85rem;
+    border-left: 4px solid var(--color-navy);
+    z-index: 2;
+}
+
+.badge-icon {
+    font-size: 1.5rem;
+    color: var(--color-navy);
+}
+
+.badge-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.badge-name {
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: var(--color-navy);
+}
+
+.badge-spec {
+    font-size: 0.75rem;
+    color: var(--text-muted);
+}
+
+/* 
+   2. TARJETAS DE SERVICIOS
+    */
+.dental-services-section {
+    padding: clamp(3.5rem, 6vw, 5.5rem) 0;
+    background-color: var(--light);
+}
+
+.dental-cards-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
+}
+
+.treatment-card {
+    background-color: var(--white);
+    border-radius: var(--radius-md);
+    padding: 2rem 1.4rem 1.5rem;
+    display: flex;
+    flex-direction: column;
+    box-shadow: var(--shadow-soft);
+    border-top: 4px solid var(--color-sky-blue);
+    transition: var(--transition);
+}
+
+.scroll-animate {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.scroll-animate.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.treatment-card:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-hover);
+    border-top-color: var(--color-navy);
+}
+
+.treatment-icon-wrap {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: #eaf1f7;
+    color: var(--color-navy);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    margin-bottom: 1.25rem;
+    transition: var(--transition);
+}
+
+.treatment-logo {
+    width: 2.5rem;
+    height: 2.5rem;
+}
+
+.treatment-card:hover .treatment-icon-wrap {
+    background-color: var(--color-navy);
+    color: var(--white);
+}
+
+.treatment-title {
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: var(--color-navy);
+    margin-bottom: 0.6rem;
+}
+
+.treatment-desc {
+    font-size: 0.88rem;
+    color: var(--text-muted);
+    line-height: 1.5;
+    margin-bottom: 1.5rem;
+    flex-grow: 1;
+}
+
+.btn-treatment-action {
+    align-self: flex-start;
+    background: none;
+    border: none;
+    font-family: inherit;
+    font-size: 0.88rem;
+    font-weight: 700;
+    color: var(--color-navy);
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    cursor: pointer;
+    padding: 0.3rem 0;
+    transition: var(--transition);
+}
+
+.btn-treatment-action:hover {
+    color: #4a8db7;
+    transform: translateX(4px);
+}
+
+/* 
+   3. SECCIÓN PRESENTACIÓN ODONTÓLOGA
+    */
+.doctor-profile-section {
+    padding: clamp(3.5rem, 6vw, 5.5rem) 0;
+    background-color: var(--white);
+}
+
+.doctor-profile-grid {
+    display: grid;
+    grid-template-columns: 0.9fr 1.1fr;
+    align-items: center;
+    gap: clamp(2rem, 5vw, 4rem);
+}
+
+.photo-frame {
+    position: relative;
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    box-shadow: var(--shadow-hover);
+}
+
+.photo-frame::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border: 2px solid rgba(200, 217, 230, 0.4);
+    border-radius: var(--radius-lg);
+    pointer-events: none;
+}
+
+.doctor-profile-img {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 3 / 4;
+    object-fit: cover;
+    object-position: top center; 
+    display: block;
+}
+
+
+.doctor-name {
+    font-size: clamp(2rem, 3vw, 2.6rem);
+    color: var(--color-navy);
+    margin-bottom: 0.25rem;
+}
+
+.doctor-role {
+    font-size: 1.05rem;
+    font-weight: 600;
+    color: #4a8db7;
+    margin-bottom: 1.25rem;
+}
+
+.doctor-bio {
+    font-size: 1rem;
+    color: var(--text-muted);
+    line-height: 1.7;
+    margin-bottom: 1.5rem;
+}
+
+.doctor-checklist {
+    margin-bottom: 2rem;
+}
+
+.doctor-checklist li {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    font-size: 0.95rem;
+    color: var(--text);
+    margin-bottom: 0.6rem;
+    font-weight: 500;
+}
+
+.doctor-checklist i {
+    color: #2e7d32;
+    font-size: 1.1rem;
+}
+
+/* 
+   4. SECCIÓN BENEFICIOS
+    */
+.benefits-section {
+    padding: clamp(3.5rem, 6vw, 5rem) 0;
+    background-color: #edf4f9;
+}
+
+.benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
+}
+
+.benefit-card {
+    background: var(--white);
+    padding: 2rem 1.5rem;
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-soft);
+    text-align: center;
+    transition: var(--transition);
+}
+
+.benefit-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-hover);
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+
+    .scroll-animate,
+    .scroll-animate.is-visible,
+    .treatment-card:hover,
+    .benefit-card:hover {
+        transition: none;
+        transform: none;
+    }
+}
+
+.benefit-icon {
+    width: 55px;
+    height: 55px;
+    border-radius: var(--radius-sm);
+    background-color: var(--color-pale-pink);
+    color: #c95272;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    margin: 0 auto 1.25rem;
+}
+
+.benefit-title {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--color-navy);
+    margin-bottom: 0.5rem;
+}
+
+.benefit-text {
+    font-size: 0.88rem;
+    color: var(--text-muted);
+    line-height: 1.5;
+}
+
+/* 
+   5. CONSULTORIO SHOWCASE
+    */
+.clinic-showcase-section {
+    padding: clamp(3rem, 5vw, 5rem) 0;
+    background-color: var(--white);
+}
+
+.showcase-grid {
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    align-items: center;
+    gap: 3rem;
+}
+
+.showcase-title {
+    font-size: clamp(1.8rem, 2.6vw, 2.3rem);
+    color: var(--color-navy);
+    margin-bottom: 1rem;
+}
+
+.showcase-text {
+    color: var(--text-muted);
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+}
+
+.showcase-img {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 4 / 5;
+    object-fit: contain;
+    background-color: var(--light);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-soft);
+}
+
+/* 
+   6. CTA ODONTOLOGÍA
+    */
+.dental-cta-section {
+    padding: clamp(3rem, 6vw, 4.5rem) 0;
+    background: linear-gradient(135deg, var(--color-navy) 0%, #172635 100%);
+    color: var(--white);
+}
+
+.dental-cta-title {
+    font-size: clamp(2rem, 3.2vw, 2.8rem);
+    color: var(--white);
+    margin-bottom: 0.75rem;
+}
+
+.dental-cta-text {
+    font-size: 1.1rem;
+    color: var(--color-sky-blue);
+    max-width: 650px;
+    margin: 0 auto 2rem;
+}
+
+.cta-btn-group {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.btn-cta-primary {
+    background-color: #25d366;
+    color: var(--white);
+    font-size: 1rem;
+    font-weight: 700;
+    padding: 0.9rem 2rem;
+}
+
+.btn-cta-primary:hover {
+    background-color: #20ba59;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(37, 211, 102, 0.4);
+}
+
+.btn-cta-secondary {
+    background-color: transparent;
+    color: var(--white);
+    border: 2px solid var(--color-sky-blue);
+    padding: 0.9rem 2rem;
+}
+
+.btn-cta-secondary:hover {
+    background-color: var(--color-sky-blue);
+    color: var(--color-navy);
+    transform: translateY(-2px);
+}
+
+/* ==========================================================================
+   7. CONTACTO & MAPA
+   ========================================================================== */
+.dental-contact-section {
+    padding: clamp(3rem, 5vw, 5rem) 0;
+    background-color: var(--light);
+}
+
+.dental-contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background-color: var(--white);
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    box-shadow: var(--shadow-soft);
+}
+
+.contact-card-info {
+    padding: clamp(2rem, 4vw, 3.5rem);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.contact-card-title {
+    font-size: clamp(1.6rem, 2.2vw, 2.1rem);
+    color: var(--color-navy);
+    margin-bottom: 0.25rem;
+}
+
+.contact-lead {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #4a8db7;
+    margin-bottom: 2rem;
+}
+
+.contact-details-list {
+    margin-bottom: 2rem;
+}
+
+.contact-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    margin-bottom: 1.25rem;
+}
+
+.contact-item i {
+    color: var(--color-navy);
+    font-size: 1.3rem;
+    margin-top: 0.2rem;
+}
+
+.contact-item strong {
+    display: block;
+    color: var(--color-navy);
+    font-size: 0.95rem;
+    margin-bottom: 0.15rem;
+}
+
+.contact-item p {
+    font-size: 0.88rem;
+    color: var(--text-muted);
+    line-height: 1.4;
+}
+
+.schedule-line {
+    margin-bottom: 0.2rem;
+}
+
+.schedule-line span {
+    font-weight: 600;
+    color: var(--text);
+}
+
+.btn-full {
+    width: 100%;
+}
+
+.map-container-dental {
+    width: 100%;
+    min-height: 420px;
+    height: 100%;
+}
+
+.map-container-dental iframe {
+    width: 100%;
+    height: 100%;
+    min-height: 420px;
+}
+
+/* 
+   RESPONSIVE ODONTOLOGÍA
+    */
+@media (max-width: 1024px) {
+    .dental-cards-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .benefits-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .doctor-badge-floating {
+        left: 0;
+        bottom: 10px;
+    }
+    
+}
+
+@media (max-width: 852px) {
+    .dental-hero-grid,
+    .doctor-profile-grid,
+    .showcase-grid,
+    .dental-contact-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .dental-hero-content {
+        text-align: center;
+    }
+
+    .dental-hero-text {
+        margin: 0 auto 2rem;
+    }
+
+    .hero-actions {
+        justify-content: center;
+    }
+
+    .dental-hero-image-wrapper {
+        margin-top: 1.5rem;
+    }
+
+    
+    .menu-toggle {
+        display: block;
+    }
+
+    .nav-menu {
+        position: fixed;
+        top: 65px;
+        right: -100%;
+        width: 80%;
+        max-width: 320px;
+        height: calc(100vh - 65px);
+        background-color: var(--white);
+        box-shadow: -5px 0 20px rgba(0, 0, 0, 0.1);
+        flex-direction: column;
+        justify-content: flex-start;
+        padding: 2.5rem 1.5rem;
+        transition: right 0.3s ease-in-out;
+        z-index: 1001;
+    }
+
+    .nav-menu.active {
+        right: 0;
+    }
+
+    .nav-list {
+        flex-direction: column;
+        align-items: flex-start;
+        width: 100%;
+        gap: 1.5rem;
+    }
+
+}
+
+@media (max-width: 767px) {
+    .dental-cards-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .benefits-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .doctor-badge-floating {
+        position: static;
+        margin-top: 1rem;
+        width: 100%;
+        justify-content: center;
+    }
+
+    .map-container-dental {
+        min-height: 300px;
+    }
+}
