@@ -139,16 +139,15 @@
 }
 
 .dental-hero-img {
-    width: 60%;
+    width: 100%;
     height: auto;
-    max-height: 600px;
     aspect-ratio: 4 / 5;
     object-fit: cover;
     object-position: top center;
     border-radius: var(--radius-lg);
     box-shadow: var(--shadow-hover);
     border: 4px solid var(--white);
-}
+}  
 
 .doctor-badge-floating {
     position: absolute;
@@ -707,6 +706,11 @@
 
     .benefits-grid {
         grid-template-columns: 1fr;
+    }
+
+    .doctor-badge-floating {
+        margin-top: 1rem;
+        justify-content: center;
     }
 
     .map-container-dental {
