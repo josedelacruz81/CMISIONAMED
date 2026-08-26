@@ -709,13 +709,6 @@
         grid-template-columns: 1fr;
     }
 
-    .doctor-badge-floating {
-        position: static;
-        margin-top: 1rem;
-        width: 100%;
-        justify-content: center;
-    }
-
     .map-container-dental {
         min-height: 300px;
     }
