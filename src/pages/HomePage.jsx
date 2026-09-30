@@ -235,7 +235,7 @@ export default function HomePage({ activeService, menuOpen, setActiveService, sc
         <ul className="footer-links">
           <li><a href="#nosotros">Nosotros</a></li>
           <li><a href="#contacto">Contacto</a></li>
-          <li><a href="#inicio">Términos Legales</a></li>
+          {/* <li><a href="#inicio">Términos Legales</a></li> */}
         </ul>
       </div>
       <div className="footer-col">
